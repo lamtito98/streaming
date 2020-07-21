@@ -14,13 +14,13 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="img-fluid"  src="../img/ex.jpg" alt="Los Angeles" width="100" height="100">
+      <img class="img-fluid"  src="img/ex.jpg" alt="Los Angeles" width="100" height="100">
       <div class="carousel-caption">
         <h3>The Punisher</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="img-fluid" src="../img/blue.jpg" alt="Chicago" width="100" height="100">
+      <img class="img-fluid" src="img/blue.jpg" alt="Chicago" width="100" height="100">
       <div class="carousel-caption">
         <div class="carousel-caption">
         <h3>Kabir</h3>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="img-fluid" src="../img/wooman.jpg" alt="New York" width="100" height="100">
+      <img class="img-fluid" src="img/wooman.jpg" alt="New York" width="100" height="100">
       <div class="carousel-caption">
         <h3>The Forty-First</h3>
       </div>
@@ -69,7 +69,7 @@
 
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Movie Title</h3>
               <h4>Category</h4>
@@ -79,7 +79,7 @@
 
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Movie Title</h3>
               <h4>Category</h4>
@@ -89,7 +89,7 @@
 
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/hacker.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/hacker.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Movie Title</h3>
               <h4>Category</h4>
@@ -98,7 +98,7 @@
         </div>
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/hacker2.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/hacker2.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Movie Title</h3>
               <h4>Category</h4>
@@ -107,7 +107,7 @@
         </div>
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/hacker3.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/hacker3.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Movie Title</h3>
               <h4>Category</h4>
@@ -116,7 +116,7 @@
         </div>
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card rounded">
-            <img src="../img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Movie Title</h3>
               <h4>Category</h4>
@@ -167,7 +167,7 @@
 
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Serie Title</h3>
               <h4>Category</h4>
@@ -177,7 +177,7 @@
 
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Serie Title</h3>
               <h4>Category</h4>
@@ -196,7 +196,7 @@
         </div>
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/hacker2.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/hacker2.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Serie Title</h3>
               <h4>Category</h4>
@@ -205,7 +205,7 @@
         </div>
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/hacker3.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/hacker3.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Serie Title</h3>
               <h4>Category</h4>
@@ -214,7 +214,7 @@
         </div>
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card rounded">
-            <img src="../img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/ex.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Serie Title</h3>
               <h4>Category</h4>
