@@ -14,12 +14,7 @@
 				<div class="panel panel-login">
 					<div class="panel-heading">
 						<div class="row">
-							<div class="col-xs-6">
-								<a href="login.php">Login</a>
-							</div>
-							<div class="col-xs-6">
-								<a href="register.php" class="active" id="">Register</a>
-							</div>
+							<div class="col-xs-6">Register</div>
 						</div>
 						<hr>
 					</div>
