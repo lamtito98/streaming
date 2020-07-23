@@ -1,4 +1,4 @@
-<?php include("functions/init.php"); ?>
+<?php include("includes/db_config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
