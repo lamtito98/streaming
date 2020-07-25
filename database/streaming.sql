@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 22 juil. 2020 à 07:04
+-- Généré le :  sam. 25 juil. 2020 à 05:11
 -- Version du serveur :  10.1.37-MariaDB
 -- Version de PHP :  7.3.1
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `login`
+-- Base de données :  `streaming`
 --
 
 -- --------------------------------------------------------
@@ -30,23 +30,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` text NOT NULL,
-  `validation_code` text NOT NULL,
-  `active` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `firstname` varchar(25) NOT NULL,
+  `lastname` varchar(25) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `passwordd` varchar(255) NOT NULL,
+  `sign_up_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `is_subscribe` tinyint(4) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password`, `validation_code`, `active`) VALUES
-(18, 'Lamsonito', 'Lamour', 'lamsonito', 'lamsonestimond2@gmail.com', '202cb962ac59075b964b07152d234b70', 'f525513bbb2b6fba6655647492e104f5', 0),
-(19, 'Samson', 'Lamour', 'Samsonn', 'kinglamtito2@gmail.com', '62c8ad0a15d9d1ca38d5dee762a16e01', '790c5afff19b02f5f0addaf8bcdc23d8', 0),
-(20, 'Miche-Erline', 'Beaubrun', 'Miche', 'micheerline1999@gmai.com', '1ff14a30ced592ee198b2a35790b4d1a', 'd32e0e94e83c17d3fde8d4e4b3668f65', 0);
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `email`, `passwordd`, `sign_up_date`, `is_subscribe`) VALUES
+(1, 'Lamson', 'Estimond', 'Lamtito', 'lamsonestimond2@gmail.com', '123456', '2020-07-24 16:37:44', 0),
+(3, 'Oralie', 'Nacius', 'Oralie2016', 'oralie@gmail.com', 'A09E45F3E62E2B328E69AF2BF6E2682548531BCD6736D476612D0A5E6A4683AF101BB05E21B1141EFAC8B2B9097F529E876836D579FEE7E456573FFB77B5BB5C', '2020-07-24 19:51:02', 0);
 
 --
 -- Index pour les tables déchargées
@@ -66,7 +65,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

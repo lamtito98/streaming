@@ -1,3 +1,34 @@
+<?php
+  
+require_once("includes/db_config.php");
+require_once ("includes/classes/FormSanitizer.php");
+require_once ("includes/classes/Constants.php");
+require_once ("includes/classes/Account.php");
+
+  $account = new Account($connection);
+
+  if(isset($_POST["signin"]))
+  {
+    $username = FormSanitizer::sanitizeFormUsername($_POST["username"]);
+    $password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
+    
+    $success = $account->login_user($username,$password);
+
+    if($success)
+    {
+      $_SESSION["user"] = $username;
+      header("Location: index.php");
+    }
+
+  }
+
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,22 +61,21 @@
 
 </head>
 
-<body class="sign-in">
-	<form class="form-signin">
+<body class="sign-in" >
+	<form class="form-signin" method="POST">
   <img class="mb-4" src="img/logo_officiel.jpg" alt="logo" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-  <label for="email" class="sr-only">Email address</label>
-  <input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" required autofocus>
-
-  <label for="login-Password" class="sr-only">Password</label>
+  <?php echo $account->getError(Constants::$loginFailed);?>
+  <?php echo $account->getError(Constants::$notRegister);?>
+  <input type="text" name="username" id="email" tabindex="1" class="form-control" placeholder="Username" required autofocus>
   <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Password" required>
   <div class="checkbox mb-2">
     <label>
       <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
 	<label for="remember"> Remember me</label>
   </div>
-  <p class=" mb-1 mb-3 text-center"><a href="register.php">Don't have an account?Create one.</p>
-  <input input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-lg btn-secondary btn-block" value="Log In">
+  <p class=" mb-1 text-center"><a href="register.php">Don't have an account?Create one.</p>
+  <button type="submit" name="signin" class="btn btn-lg btn-secondary">Sign in</button>
   <p class="mt-1 mb-1 text-muted justify-content-center"><a href="recover.php">Forgot password?</p>
 </form>
 </body>

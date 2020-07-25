@@ -1,6 +1,10 @@
-<?php include "includes/header.php";  ?>
+<?php
+      require_once("includes/header.php"); 
+      require_once("includes/nav.php");
 
-<?php include "includes/nav.php";  ?>	 
+
+ ?>
+	 
 	
 
 <div id="movies" class="carousel slide" data-ride="carousel">
@@ -46,11 +50,11 @@
 </div>
     </div>
   </div>
-<?php display_message(); ?>
   <div class="container-fluid">
     <div class="container">
       <div class="d-flex justify-content-center">
         <h2>Movie</h2>
+
       </div>
       <div class="d-flex justify-content-center">
         <ul class="list-group list-group-horizontal">
@@ -187,7 +191,7 @@
 
         <div class="col-sm-4 col-md-4 mb-3">
           <div class="card">
-            <img src="../img/hacker.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
+            <img src="img/hacker.jpg"  class="card-img-top" style="height:300px;width:auto;object-fit:cover;">
             <div class="card-body">
               <h3>Serie Title</h3>
               <h4>Category</h4>

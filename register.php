@@ -16,7 +16,12 @@ if (isset($_POST["register-submit"]))
 		$password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
 		$password2 = FormSanitizer::sanitizeFormPassword($_POST["confirm_password"]);
 		
-		$account->register_user($firstname,$lastname,$username,$email,$email2,$password,$password2);
+		$success = $account->register_user($firstname,$lastname,$username,$email,$email2,$password,$password2);
+
+		if($success)
+		{
+			header("Location: index.php");
+		}
 	}
 
  ?>
@@ -55,15 +60,21 @@ if (isset($_POST["register-submit"]))
 		    </div>
 		    <div class="form-group">
 		    	<?php echo $account->getError(Constants::$userNameErrorMessage) ; ?>
+		    	<?php echo $account->getError(Constants::$usernameExists);?>
 		      <input type="text" class="form-control" id="username"  name="username" placeholder="Username">
 		    </div>
 		    <div class="form-group">
+		    	<?php echo $account->getError(Constants::$emailsDontMatch);?>
+		    	<?php echo $account->getError(Constants::$invalidEmail);?>
+		    	<?php echo $account->getError(Constants::$emailExists);?>
 		      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
 		    </div>
 		    <div class="form-group">
 		      <input type="email" class="form-control" id="exampleInputEmail2" name="confirm_email" aria-describedby="emailHelp" placeholder="Confirm Enter email">
 		    </div>
 		    <div class="form-group">
+		    	<?php echo $account->getError(Constants::$passwordsDontMatch);?>
+		    	<?php echo $account->getError(Constants::$passwordErrorMessage);?>
 		      <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
 		    </div>
 		    <div class="form-group">
