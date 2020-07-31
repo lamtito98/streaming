@@ -24,6 +24,15 @@ if (isset($_POST["register-submit"]))
 		}
 	}
 
+function getInputValue($name)
+  {
+    if(isset($_POST[$name]))
+    {
+      echo $_POST[$name];
+    }
+  }
+
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,33 +61,33 @@ if (isset($_POST["register-submit"]))
 		    <legend>Register</legend>
 		    <div class="form-group">
 		      <?php echo $account->getError(Constants::$firstNameErrorMessage) ; ?>
-		      <input type="text" class="form-control" id="FirstName"  name="firstname" placeholder="First Name">
+		      <input type="text" class="form-control" id="FirstName"  name="firstname" placeholder="First Name" value="<?php getInputValue("firstname");  ?>" required>
 		    </div>
 		    <div class="form-group">
 		    	<?php echo $account->getError(Constants::$lastNameErrorMessage) ; ?>
-		      <input type="text" class="form-control" id="lastName"  name="lastname" placeholder="Last Name">
+		      <input type="text" class="form-control" id="lastName"  name="lastname" placeholder="Last Name" value="<?php getInputValue("lastname");  ?>" required>
 		    </div>
 		    <div class="form-group">
 		    	<?php echo $account->getError(Constants::$userNameErrorMessage) ; ?>
 		    	<?php echo $account->getError(Constants::$usernameExists);?>
-		      <input type="text" class="form-control" id="username"  name="username" placeholder="Username">
+		      <input type="text" class="form-control" id="username"  name="username" placeholder="Username" value="<?php getInputValue("username");  ?>" required>
 		    </div>
 		    <div class="form-group">
 		    	<?php echo $account->getError(Constants::$emailsDontMatch);?>
 		    	<?php echo $account->getError(Constants::$invalidEmail);?>
 		    	<?php echo $account->getError(Constants::$emailExists);?>
-		      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+		      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email" value="<?php getInputValue("email");  ?>" required>
 		    </div>
 		    <div class="form-group">
-		      <input type="email" class="form-control" id="exampleInputEmail2" name="confirm_email" aria-describedby="emailHelp" placeholder="Confirm Enter email">
+		      <input type="email" class="form-control" id="exampleInputEmail2" name="confirm_email" aria-describedby="emailHelp" placeholder="Confirm Enter email" value="<?php getInputValue("confirm_email"); ?>" required>
 		    </div>
 		    <div class="form-group">
 		    	<?php echo $account->getError(Constants::$passwordsDontMatch);?>
 		    	<?php echo $account->getError(Constants::$passwordErrorMessage);?>
-		      <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+		      <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="<?php getInputValue("password");  ?>" required>
 		    </div>
 		    <div class="form-group">
-		      <input type="password" class="form-control" id="exampleInputPassword2" name="confirm_password" placeholder="Confirm Password">
+		      <input type="password" class="form-control" id="exampleInputPassword2" name="confirm_password" placeholder="Confirm Password" value="<?php getInputValue("confirm_password");  ?>" required>
 		    </div>
 		    
 		    <button type="submit" name="register-submit" class="btn btn-secondary">Register</button>

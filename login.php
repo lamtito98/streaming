@@ -22,8 +22,13 @@ require_once ("includes/classes/Account.php");
 
   }
 
-
-
+  function getInputValue($name)
+  {
+    if(isset($_POST[$name]))
+    {
+      echo $_POST[$name];
+    }
+  }
 
 
 
@@ -67,7 +72,7 @@ require_once ("includes/classes/Account.php");
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <?php echo $account->getError(Constants::$loginFailed);?>
   <?php echo $account->getError(Constants::$notRegister);?>
-  <input type="text" name="username" id="email" tabindex="1" class="form-control" placeholder="Username" required autofocus>
+  <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="<?php getInputValue("username");  ?>" required autofocus>
   <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Password" required>
   <div class="checkbox mb-2">
     <label>
