@@ -31,6 +31,7 @@
 			$thumbnail = $entity->getThumbnail();
 			$previewVideo = $entity->getPreviewVideo();
 
+
 			echo " 
 				<div class='container-fluid'>
 					<img src='$thumbnail' class='img-fluid' hidden width='100%' height='100%'>
@@ -40,9 +41,9 @@
 					<source src='$previewVideo' type='video/mp4' hidden width='100%' height='100%'>
 					</video>
 
-				</div>";
-		}
+					</div>";
 
+		}
 
 
 
