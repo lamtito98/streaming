@@ -48,3 +48,12 @@ page-link
   min-width: 100%;
   height: 32rem;
 }*/
+
+
+ .previewOverlay
+ {
+  width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+ }

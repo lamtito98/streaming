@@ -24,7 +24,7 @@
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/style-index.css">
 </head>
-<body>
+<body class="bg-dark">
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" href="index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logo</font></font></a>
@@ -67,4 +67,3 @@
   </div>
 </nav>
 </header>
-  <div class="container-fluid bg-dark">
