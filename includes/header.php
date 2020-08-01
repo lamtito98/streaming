@@ -60,7 +60,7 @@
 
     <div class="d-flex justify-content-right my-2 my-lg-0">
         <ul class="list-group list-group-horizontal ml-4 my-sm-0">
-          <li class="list-group-item bg-secondary "><a href="login.html">Sign in</a></li>
+          <li class="list-group-item bg-secondary "><a href="login.php">Sign in</a></li>
         </ul>
       </div>
 
