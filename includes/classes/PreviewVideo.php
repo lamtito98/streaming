@@ -1,5 +1,6 @@
 <?php
 
+	// class of the preview video
 	class PreviewVideo
 	{
 		private $connection, $username;
@@ -9,6 +10,7 @@
 			$this->username = $username;
 		}
 
+		// function to get the entity random
 		private function getEntity()
 		{
 			$query = $this->connection->prepare("SELECT * from entities ORDER by RAND() LIMIT 1 ");
@@ -19,6 +21,7 @@
 			return new Entity($this->connection, $row);
 		}
 
+		// function to create the preview video and set it to the index page
 		public function create_preview_video($entity)
 		{
 			if($entity == null)

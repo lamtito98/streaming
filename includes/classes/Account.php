@@ -2,14 +2,17 @@
 /*Account class with validation and database insertions*/
 class Account
 {
+	//declare the connection and an erray to put the errors
 	private $connection;
 	private $errorArray = array();
 
+	//constructor for the connection
 	public function __construct($connection)
 	{
 		$this->connection = $connection;
 	}
 
+	//function to get the errors and set them
 	public function getError($error)
 	{
 		if(in_array($error, $this->errorArray))
@@ -18,6 +21,7 @@ class Account
 		}
 	}
 
+	// function to register the user
 	public function register_user($firstname,$lastname,$username,$email,$confirm_email,$password,$confirm_password)
 	{
 		$this->validateFirstname($firstname);
@@ -33,6 +37,7 @@ class Account
 		return false;
 	}
 
+	// function to validate the firstname
 	private function validateFirstname($firstname)
 	{
 		if(strlen($firstname) < 2 || strlen($firstname) > 25)
@@ -41,6 +46,7 @@ class Account
 		}
 	}
 
+	// function to validate the lastname
 	private function validateLastname($lastname)
 	{
 		if(strlen($lastname) < 2 || strlen($lastname) > 25)
@@ -49,6 +55,7 @@ class Account
 		}
 	}
 
+	// function to validate the username
 	private function validateUsername($username)
 	{
 		if(strlen($username) < 5 || strlen($username) > 15)
@@ -67,6 +74,7 @@ class Account
 		}
 	}
 
+	// function to validate the email
 	private function validateEmails($email,$confirm_email)
 	{
 		if($email != $confirm_email)
@@ -91,7 +99,7 @@ class Account
 		}
 	}
 
-
+	// function to validate the firstname
 	private function validatePasswords($password,$confirm_password)
 	{
 		if($password != $confirm_password)
@@ -106,7 +114,7 @@ class Account
 		}
 	}
 
-
+	// function to insert the user in the database and the hashing of the password
 	private function insertUser($firstname,$lastname,$username,$email,$password)
 	{
 		$length_password = strlen($password);
@@ -126,7 +134,7 @@ class Account
 		return $query -> execute();
 	}
 
-
+	// function to login the user
 	public function login_user($username, $password)
 	{
 		$length_password = strlen($password);
