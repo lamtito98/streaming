@@ -1,6 +1,13 @@
 html{
 
 }
+
+.previewContainer.small{
+      width: 230px;
+    height: 129px;
+    margin-right: 4px;
+    display: inline-block;
+}
 li a
 {
 	color: black;
@@ -9,6 +16,10 @@ li a
 a:link 
 {
   text-decoration: none;
+}
+h2
+{
+  color: white;
 }
 page-link
 {

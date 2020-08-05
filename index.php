@@ -9,6 +9,15 @@
       echo $previewVideo->create_preview_video(null);
 
 
+      // Create the categories
+      $category = new Category($connection, $user);
+
+      // show the categories
+      echo $category->showCategoriesName();
+
+
+
+
 
 
 
