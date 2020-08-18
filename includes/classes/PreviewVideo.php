@@ -56,7 +56,7 @@
 			return "<div class='col-sm-4 col-md-3 mb-3'>
 				        <a href='watch.php?id=$id'>
 				          <div class='card'>
-				            <img src='$thumbnail'  class='card-img-top' style='height:300px;width:auto;object-fit:cover;'>
+				            <img src='$thumbnail'  class='card-img-top' style='height:170px;width:auto;object-fit:cover;'>
 				            <div class='card-body'>
 				              <h3>$name</h3>
 				              <h4>Description</h4>
