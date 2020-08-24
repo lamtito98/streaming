@@ -44,6 +44,30 @@
 
 		}
 
+		public function watch_video($entity)
+		{
+			$id = $entity->getId();
+			$previewVideo = $entity->getPreviewVideo();
+
+
+			echo "
+				<div class='container mb-5'>
+					<video autoplay muted class='img-fluid'>
+						<source src='$previewVideo' type='video/mp4' height='100%'>
+					</video>
+				</div>
+
+
+
+
+
+
+
+
+
+				";
+		}
+
 
 		// function to create the entities
 		public function create_entities($entity)

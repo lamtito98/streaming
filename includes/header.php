@@ -4,6 +4,7 @@
       require_once("includes/classes/Category.php");
       require_once("includes/classes/Entity.php");
       require_once("includes/classes/EntityProvider.php");
+      require_once("includes/classes/SeasonClass.php");
 
       if(!isset($_SESSION["user"]))
       {

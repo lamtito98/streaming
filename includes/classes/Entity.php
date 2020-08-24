@@ -20,7 +20,7 @@
 				$query->bindValue(":id", $input);
 				$query-> execute();
 
-				$this->$data = $query->fetch(PDO::FETCH_ASSOC);
+				$this->data = $query->fetch(PDO::FETCH_ASSOC);
 			}
 			
 		}
